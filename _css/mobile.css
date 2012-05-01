@@ -1,0 +1,159 @@
+		/* << #Current dynamically populated in #header in main.js function */
+#header {
+	width:100%;
+	line-height:1.9;
+	margin: 0 auto;
+	padding: 6px;
+	text-align: center;
+}
+#header h1 {
+	display: inline;
+}
+#reset input{
+	display: block;
+	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-width: 0 8px 0 14px;
+	line-height: 28px;
+	position: absolute;
+	top: 7px;
+	left: 6px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	-webkit-border-image: url(back-button.png) 0 8 0 14;
+	color: white;
+}
+#current {
+	display: none;
+}
+	/* Content wrapper div */
+#content {
+	width: 100%;
+	margin-bottom: 10px;
+}
+	/*Class for nav-container div to hold UL of thumbs - called by main.js for navigation appearance change*/
+.mainNav img{
+	width:85px;
+	height: 85px;
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	border:1px solid #363636;
+	margin: 4px;
+}
+	/*styles for scrolling horizontal top navigation - hidden for mobile */
+.horizNav {
+	display: none;
+}
+	/*container for mixes, both album covers and playlist players */
+#mix-container {
+	margin: 2px;
+}
+	/*ID and class for mix-container div to hold UL of album covers*/
+#albums{
+
+}
+.albums {
+	
+}
+.albums img {	
+   -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.90, transparent), to(white));
+  	width: 100px;
+	border: 1px solid #666;
+}
+.albums ul {
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 999;
+}
+.albums li {
+	display: none;
+	float: left;
+	padding: 0;
+	margin: 8px;
+}
+	/*class for dynamically created div to hold each individual playlist player */
+.playlist {
+	min-width: 0px;
+	font-size: .9em;	
+}
+
+/* MINIMIZED FOR MOBILE; JJ
+ *
+ * jPlayer Plugin Styling (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 3.0 (jPlayer 2.0.0)
+ * Date: 20th December 2010
+ */
+ 	/* positioning controls of the button playlist interface */
+div.jp-interface {
+	background-color: #ecedef;
+	border:0;
+}
+div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:125px;
+}
+div.jp-audio div.jp-type-playlist a.jp-play,
+div.jp-audio div.jp-type-playlist a.jp-pause {
+	top:10px;
+	left:152px;
+}
+div.jp-audio div.jp-type-playlist a.jp-stop {
+	top:15px;
+	left:262px;
+}
+div.jp-audio div.jp-type-playlist a.jp-previous {
+	top:15px;
+	left:118px;
+}
+div.jp-audio div.jp-type-playlist a.jp-next {
+	top:15px;
+	left:198px;
+}
+div.jp-audio div.jp-type-playlist div.jp-progress {
+	top:60px;
+	left:120px;
+	width:180px;
+	height:15px;
+}
+div.jp-audio div.jp-type-playlist a.jp-mute,
+div.jp-audio div.jp-type-playlist a.jp-unmute {
+	top:95px;
+	left:160px;
+}
+div.jp-audio div.jp-type-playlist div.jp-volume-bar {
+	top:100px;
+	left:180px;
+}
+div.jp-audio div.jp-type-playlist div.jp-current-time,
+div.jp-audio div.jp-type-playlist div.jp-duration {
+	top:80px;
+	left:120px;
+	width:180px;
+}
+	/* track listing styling */
+div.jp-playlist {
+	border:1px solid #636336;
+}
+div.jp-type-playlist div.jp-playlist li {
+	padding:8px 0 7px 20px;
+	border-bottom:2px solid #eee;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-last {
+	padding:8px 0 8px 20px;
+	border-bottom:none;
+}
+ 
+ /*END jPlayer Plugin Styling (jQuery JavaScript Library) */

@@ -1,0 +1,430 @@
+body {
+	color:#101112;
+	font-family: Helvetica, Arial, san-serif;
+	background-color: #ecedef;
+}
+a {
+	color: #810209;
+	text-decoration: none;
+}
+.clear {
+	clear:both;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+/**** HTML Structure tagging CSS ****/
+	/*full page wrapper div */
+#page {
+
+}
+	/* << #Current dynamically populated in #header in main.js function */
+#header {
+	z-index:5;
+	width:90%;
+	line-height:1.9;
+	margin: 0 auto;
+	background-color:rgba(255,255,255,0.9);
+	padding:10px;
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	border:1px solid #6A6A6A;
+}
+#header h1 {
+	display: inline;
+}
+#reset {
+	display: none;
+}
+#current {
+	display: inline;
+	margin-left: 130px;
+}
+#current:hover {
+	cursor: pointer;
+	color: #810209;
+}	
+	/* Content wrapper div */
+#content {
+	width: 90%;
+	margin: 0 auto;
+}
+	/*container for navigation, both MainNav and HorizNav */
+#nav-container {
+	width: 98%;
+}
+	/*ID for nav-container div to hold UL of thumbs*/
+#navigation{
+
+}
+	/*Class for nav-container div to hold UL of thumbs - called by main.js for navigation appearance change*/
+.mainNav {
+	width: 100%;
+	margin-top: 15px;
+	margin: 0 auto;
+}
+.mainNav img{
+	width:200px;
+	height: 200px;
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	border:1px solid #363636;
+}
+	/*styles for scrolling horizontal top navigation:  
+	 *CRED: http://valums.com/scroll-menu-jquery/ 
+	 */
+div.horizNav {
+  /* Set it so we could calculate the offsetLeft */
+  position: relative;
+  height: 150px;
+  width: 98%;
+  margin: 0 auto;
+  /* Add scroll-bars */
+  overflow: auto;
+}
+.horizNav ul {
+  display: block;
+  height: 110px;
+  /* Max width here, for users without Javascript */
+  width: 2000px;
+  padding: 15px 0 0 15px;
+  /* Remove default margin */
+  margin: 0;
+  list-style: none;
+}
+.horizNav li {
+  display: block;
+  float: left;
+  padding: 0 4px;
+}
+.horizNav a {
+  display: block;
+  text-decoration: none;
+}
+.horizNav img {
+  border: 3px #fff solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.horizNav a:hover img {
+  filter:alpha(opacity=50);
+  opacity: 0.5;
+}/* END Horizontal Scroller */
+
+	/*Class for UL hold thumbs - called by main.js for navigation appearance change*/
+ul.thumbs {
+	display: block;
+	margin-top: 10px;
+	list-style: none;
+}
+.thumbs li {
+	display: block;
+	float: left;
+	padding: 0 4px;
+}
+.thumbs a {
+	display: block;
+	text-decoration: none;
+}
+
+.thumbs img {
+	border: 1px #cdcdcd solid;
+}
+.thumbs a:hover img {
+	filter:alpha(opacity=50);
+	opacity: 0.6;
+}
+	/*container for mixes, both album covers and playlist players */
+#mix-container {
+	position: relative;
+	margin: 10px;
+}
+	/*ID and class for mix-container div to hold UL of album covers*/
+#albums{
+
+}
+.albums{
+
+}
+.albums img {	
+  -webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.9, transparent), to(white));
+	border: 1px solid #666;
+}
+.albums ul {
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left:0;
+	margin-right: 30px;	
+	z-index: 999;
+}
+.albums li {
+	display: none;
+	float: left;
+	padding: 0 4px;
+}
+	/*class for UL of album covers within mix-container div*/
+.album {
+
+}
+	/*ID for mix-container div to hold divs of playlist players*/
+#tracks {
+
+}
+	/*class for mix-container div to hold divs of playlist players*/
+.tracks-container{
+
+}
+	/*class for dynamically created div to hold each individual playlist player */
+.playlist {
+	position: absolute;
+	top: 0;
+	min-width: 500px;
+	font-size:.8em;	
+}
+	/*id for bottom of the page footer*/
+#footer{
+	border-top: 1px solid #CDCDCD;
+	margin: 10px;
+	padding: 10px;
+	font:.8em #CDCDCD;
+}
+
+/*
+ * jPlayer Plugin Styling (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 3.0 (jPlayer 2.0.0)
+ * Date: 20th December 2010
+ */
+div.jp-audio {
+	font-size:1em;
+}
+div.jp-interface {
+	position: relative;
+	background-color:#efefef;
+	border:1px solid #636336;
+}
+div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:50px;
+}
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+div.jp-interface ul.jp-controls li {
+	/* position: absolute; */
+	display:inline;
+}
+div.jp-interface ul.jp-controls a {
+	position: absolute;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+a.jp-play,
+a.jp-pause {
+	width:40px;
+	height:40px;
+	z-index:1;
+}
+div.jp-audio div.jp-type-playlist a.jp-play,
+div.jp-audio div.jp-type-playlist a.jp-pause {
+	top:5px;
+	left:48px;
+}
+a.jp-play {
+	background: url("player.jpg") 0 0 no-repeat;
+}
+a.jp-play:hover {
+	background: url("player.jpg") -41px 0 no-repeat;
+}
+a.jp-pause {
+	background: url("player.jpg") 0 -42px no-repeat;
+	display: none;
+}
+a.jp-pause:hover {
+	background: url("player.jpg") -41px -42px no-repeat;
+}
+div.jp-audio div.jp-type-playlist a.jp-stop {
+	top:10px;
+	left:126px;
+}
+a.jp-stop {
+	background: url("player.jpg") 0 -83px no-repeat;
+	width:28px;
+	height:28px;
+	z-index:1;
+}
+a.jp-stop:hover {
+	background: url("player.jpg") -29px -83px no-repeat;
+}
+div.jp-audio div.jp-type-playlist a.jp-previous {
+	left:20px;
+	top:10px;
+}
+a.jp-previous {
+	background: url("player.jpg") 0 -112px no-repeat;
+	width:28px;
+	height:28px;
+}
+a.jp-previous:hover {
+	background: url("player.jpg") -29px -112px no-repeat;
+}
+div.jp-audio div.jp-type-playlist a.jp-next {
+	left:88px;
+	top:10px;
+}
+a.jp-next {
+	background: url("player.jpg") 0 -141px no-repeat;
+	width:28px;
+	height:28px;
+}
+a.jp-next:hover {
+	background: url("player.jpg") -29px -141px no-repeat;
+}
+div.jp-progress {
+	position: absolute;
+	overflow:hidden;
+	background-color: #ddd;
+}
+
+div.jp-audio div.jp-type-playlist div.jp-progress {
+	top:15px;
+	left:164px;
+	width:122px;
+	height:15px;
+}
+div.jp-seek-bar {
+	background: url("player.jpg") 0 -202px repeat-x;
+	width:0px;
+	height:100%;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	background: url("player.jpg") 0 -218px repeat-x ;
+	width:0px;
+	height:100%;
+}
+	/* The seeking class is added/removed inside jPlayer */
+div.jp-seeking-bg {
+	background: url("pbar-ani.gif");
+}
+a.jp-mute,
+a.jp-unmute {
+	width:18px;
+	height:15px;
+}
+div.jp-audio div.jp-type-playlist a.jp-mute,
+div.jp-audio div.jp-type-playlist a.jp-unmute {
+	top:18px;
+	left:296px;
+}
+a.jp-mute {
+	background: url("player.jpg") 0 -186px no-repeat;
+}
+a.jp-mute:hover {
+	background: url("player.jpg") -19px -170px no-repeat;
+}
+a.jp-unmute {
+	background: url("player.jpg") 0 -170px no-repeat;
+	display: none;
+}
+a.jp-unmute:hover {
+	background: url("player.jpg") -19px -186px no-repeat;
+}
+div.jp-volume-bar {
+	position: absolute;
+	overflow:hidden;
+	background: url("player.jpg") 0 -250px repeat-x;
+	width:46px;
+	height:5px;
+	cursor: pointer;
+}
+div.jp-audio div.jp-type-playlist div.jp-volume-bar {
+	top:23px;
+	left:324px;
+}
+div.jp-volume-bar-value {
+	background: url("player.jpg") 0 -256px repeat-x;
+	width:0px;
+	height:5px;
+}
+div.jp-current-time,
+div.jp-duration {
+	position: absolute;
+	font-size:.64em;
+	font-style:oblique;
+}
+div.jp-duration {
+	text-align: right;
+}
+div.jp-audio div.jp-type-playlist div.jp-current-time,
+div.jp-audio div.jp-type-playlist div.jp-duration {
+	top:32px;
+	left:164px;
+	width:122px;
+}
+div.jp-playlist {
+	background-color:#dedeef;
+	border:1px solid #636336;
+	border-top:none;
+}
+div.jp-playlist ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 5px;
+	font-size:.8em;
+}
+div.jp-type-playlist div.jp-playlist li {
+	padding:5px 0 4px 20px;
+	border-bottom:1px solid #eee;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-last {
+	padding:5px 0 5px 20px;
+	border-bottom:none;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:10px;
+}
+div.jp-type-playlist div.jp-playlist a {
+	color: #666;
+	text-decoration: none;
+}
+div.jp-type-playlist div.jp-playlist a:hover {
+	color: #810209;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color: #810209;
+	font-weight: bold;
+}
+div.jp-type-playlist div.jp-playlist div.jp-free-media {
+	display:inline;
+	margin-left:20px;
+}
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+	background-color: #000000;
+} /*END jPlayer Plugin Styling (jQuery JavaScript Library) */e;
+	margin-left:20px;
+}
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+	background-color: #000000;
+} /*END jPlayer Plugin Styling (jQuery JavaScript Library) */

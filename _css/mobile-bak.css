@@ -1,0 +1,349 @@
+body {
+
+}
+
+#header {
+	z-index:5;
+	text-align:center;
+	width:100%;
+	line-height:1.9;
+	margin: 0 auto;
+	background-color:rgba(255,255,255,0.9);
+	padding:0;
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	border:1px solid #6A6A6A;
+}
+
+#page {
+	position: absolute;
+	left: 0;
+}
+
+#current {
+	display: block;
+	font-size: e
+}
+
+.content {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.mainNav {
+	width: 98%;
+	margin: 0 auto;
+}
+
+.mainNav img{
+	width:85px;
+	height: 85px;
+	-webkit-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	box-shadow:2px 2px 4px rgba(0,0,0,0.3);
+	border:1px solid #363636;
+	margin: 2px;
+}
+
+.horizNav {
+	display: none;
+}
+
+#current {
+	display: block;
+	margin-left: 0px;
+	font-size: .7em;
+}
+
+.mix-container{
+	position: relative;
+	margin: 0;
+	margin-top: 15px;
+}
+
+#albums {
+
+}
+
+.albums {
+	
+}
+
+.albums img {	
+   -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.90, transparent), to(white));
+  	width: 100px;
+	border: 1px solid #666;
+	margin-left: 10px;
+}
+
+.albums ul {
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left:0;
+	margin-right: 5px;	
+	z-index: 999;
+
+}
+
+.albums li {
+	display: none;
+	float: left;
+	padding: 0;
+}
+
+.playlist {
+	position: relative;
+	top: 0;
+	width: 100%;
+	font-size:.5em;
+	margin: 0;
+}
+
+
+div.jp-interface {
+	position: relative;
+	top: 0;
+	border: 0;
+	background-color:#ecedef;
+
+}
+
+div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:115px;
+}
+
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+div.jp-interface ul.jp-controls li {
+	/* position: absolute; */
+	display:inline;
+}
+div.jp-interface ul.jp-controls a {
+	position: absolute;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+
+a.jp-play,
+a.jp-pause {
+	width:40px;
+	height:40px;
+	z-index:1;
+}
+
+div.jp-audio div.jp-type-playlist a.jp-play,
+div.jp-audio div.jp-type-playlist a.jp-pause {
+	top:5px;
+	left:148px;
+}
+
+a.jp-play {
+	background: url("player.jpg") 0 0 no-repeat;
+}
+a.jp-play:hover {
+	background: url("player.jpg") -41px 0 no-repeat;
+}
+a.jp-pause {
+	background: url("player.jpg") 0 -42px no-repeat;
+	display: none;
+}
+a.jp-pause:hover {
+	background: url("player.jpg") -41px -42px no-repeat;
+}
+
+div.jp-audio div.jp-type-playlist a.jp-stop {
+	top:10px;
+	left:222px;
+}
+
+a.jp-stop {
+	background: url("player.jpg") 0 -83px no-repeat;
+	width:28px;
+	height:28px;
+	z-index:1;
+}
+a.jp-stop:hover {
+	background: url("player.jpg") -29px -83px no-repeat;
+}
+div.jp-audio div.jp-type-playlist a.jp-previous {
+	left:120px;
+	top:10px;
+}
+
+a.jp-previous {
+	background: url("player.jpg") 0 -112px no-repeat;
+	width:28px;
+	height:28px;
+}
+a.jp-previous:hover {
+	background: url("player.jpg") -29px -112px no-repeat;
+}
+div.jp-audio div.jp-type-playlist a.jp-next {
+	left:188px;
+	top:10px;
+}
+
+a.jp-next {
+	background: url("player.jpg") 0 -141px no-repeat;
+	width:28px;
+	height:28px;
+}
+a.jp-next:hover {
+	background: url("player.jpg") -29px -141px no-repeat;
+}
+div.jp-progress {
+	position: absolute;
+	overflow: hidden;
+	background-color: #ddd;
+}
+
+div.jp-audio div.jp-type-playlist div.jp-progress {
+	top:55px;
+	left:120px;
+	width:130px;
+	height:15px;
+}
+
+div.jp-seek-bar {
+	background: url("player.jpg") 0 -202px repeat-x;
+	width:0px;
+	/* height:15px; */
+	height:100%;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	background: url("player.jpg") 0 -218px repeat-x ;
+	width:0px;
+	/* height:15px; */
+	height:100%;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+div.jp-seeking-bg {
+	background: url("pbar-ani.gif");
+}
+
+a.jp-mute,
+a.jp-unmute {
+	width:18px;
+	height:15px;
+}
+
+div.jp-audio div.jp-type-playlist a.jp-mute,
+div.jp-audio div.jp-type-playlist a.jp-unmute {
+	top:90px;
+	left:125px;
+}
+
+a.jp-mute {
+	background: url("player.jpg") 0 -186px no-repeat;
+}
+
+a.jp-mute:hover {
+	background: url("player.jpg") -19px -170px no-repeat;
+}
+
+a.jp-unmute {
+	background: url("player.jpg") 0 -170px no-repeat;
+	display: none;
+}
+
+a.jp-unmute:hover {
+	background: url("player.jpg") -19px -186px no-repeat;
+}
+
+div.jp-volume-bar {
+	position: absolute;
+	overflow:hidden;
+	background: url("player.jpg") 0 -250px repeat-x;
+	width:46px;
+	height:5px;
+	cursor: pointer;
+}
+
+div.jp-audio div.jp-type-playlist div.jp-volume-bar {
+	top:95px;
+	left:155px;
+}
+
+div.jp-volume-bar-value {
+	background: url("player.jpg") 0 -256px repeat-x;
+	width:0px;
+	height:5px;
+}
+div.jp-current-time,
+div.jp-duration {
+	position: absolute;
+	font-size:.64em;
+	font-style:oblique;
+}
+div.jp-duration {
+	text-align: right;
+}
+
+div.jp-audio div.jp-type-playlist div.jp-current-time,
+div.jp-audio div.jp-type-playlist div.jp-duration {
+	top:75px;
+	left:130px;
+	width:122px;
+}
+
+div.jp-playlist {
+	background-color:#ccc;
+	border:1px solid #636336;
+	margin-top: 1px;
+}
+
+div.jp-playlist ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 5px;
+	/* background-color:#ccc; */
+	/* border:1px solid #009be3; */
+	/* border-top:none; */
+	/* width:378px; */
+	font-size:.8em;
+}
+
+div.jp-type-playlist div.jp-playlist li {
+	padding:5px 0 4px 20px;
+	border-bottom:1px solid #eee;
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-last {
+	padding:5px 0 5px 20px;
+	border-bottom:none;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:10px;
+}
+div.jp-type-playlist div.jp-playlist a {
+	color: #666;
+	text-decoration: none;
+}
+div.jp-type-playlist div.jp-playlist a:hover {
+	color: #810209;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color: #810209;
+	font-weight: bold;
+}
+div.jp-type-playlist div.jp-playlist div.jp-free-media {
+	display:inline;
+	margin-left:20px;
+}
+
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+	background-color: #000000;
+
+}
